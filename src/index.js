@@ -7,18 +7,11 @@ let a = 1;
 let b = 1;
 plus.onclick = () => {
 	setTimeout(() => {
-		step.innerText = `Step-${a}`;
-		counter.innerText = `${b}`;
-		a++;
-
-		let c = counter.innerText;
-		b = eval(`${a}+${c}`);
+  counter.innerText = eval(`${counter.innerText}+${step.value}`);
 	}, `${time.value}000`);
 };
 minus.onclick = () => {
 	setTimeout(() => {
-		step.innerText = `Step-${a}`;
-  a--;
-		counter.innerText = eval(`${b}-${a}`);
+  counter.innerText = eval(`${counter.innerText}-${step.value}`);
 	}, `${time.value}000`);
 };
